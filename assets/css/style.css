@@ -1,0 +1,182 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+
+/* Flexbox navigation */
+.navbar {
+    /* TODO: explain the purpose of the following properties
+    The purpose of changing these parameters is controlling the Nav.
+    For example if no display the flex the bar vanishes  */
+    display: flex;
+
+    justify-content: center;
+    background-color: #dde0e5;
+    padding: 10px;
+}
+.searchbar{
+    display: flex;
+
+    justify-content: right;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+.logo{
+    display: flex;
+    /*background-color: crimson;*/
+    justify-content: left;
+    /* margin-left: auto; */
+    height: 50px;
+
+}
+
+.profilePic{
+    display: flex;
+    /*background-color: crimson;*/
+    justify-content: center;
+    /* margin-left: auto; */
+    width: 300px;
+    height: 400px;
+
+}
+
+.AboutProjectPic1{
+    display: flex;
+    /*background-color: crimson;*/
+    justify-content: center;
+    /* margin-left: auto; */
+    width: 400px;
+    height: 300px;
+
+}
+.AboutProjectPic2{
+    display: flex;
+    /*background-color: crimson;*/
+    justify-content: center;
+    /* margin-left: auto; */
+    width: 400px;
+    height: 300px;
+
+}
+
+
+
+.contentProjectArea{
+    flex-wrap: wrap;
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px auto;
+    padding: 150px;
+    background-color:  rgba(245, 239, 224, 1);
+    border: 2px solid #ccc;
+    max-width: 1200px;
+    
+
+}
+.contentColumn1Area{
+    display: flex;
+
+    /* TODO: what happens when we change this? */
+    flex-direction: row;
+    width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 150px;
+    background-color: rgba(245, 239, 224, 1);
+    border: 2px solid #ccc;
+
+    /* Flexbox alignment properties */
+    justify-content: space-evenly;
+    /* TODO: flex-start, center, space-between */
+    align-items: center;
+    /* TODO: flex-start, center, flex-end */
+}
+
+.contentAboutAreaCont{
+    display: flex;
+
+    /*flex-wrap: wrap;*/
+}
+.contentAboutAreaSide{
+    display: flex;
+
+    /* TODO: what happens when we change this? */
+    flex-direction: column;
+    width: 400px;
+    height: 1900px;
+    /*margin: 20px auto;
+    padding: 150px;*/
+    background-color: rgba(245, 239, 224, 1);
+    border: 2px solid #c4bfbf;
+
+    /* Flexbox alignment properties */
+    justify-content: space-around;
+    /* TODO: flex-start, center, space-between */
+    align-items: center;
+    /* TODO: flex-start, center, flex-end */
+}
+.contentAboutArea{
+    display: flex;
+
+    /* TODO: what happens when we change this? */
+    flex-direction: column;
+    width: 1800px;
+    height: 1900px;
+    /*margin: 20px auto;
+    padding: 150px;*/
+    background-color: #ddd;
+    border: 2px solid #ccc;
+
+    /* Flexbox alignment properties */
+    justify-content: space-around;
+    /* TODO: flex-start, center, space-between */
+    align-items: center;
+    /* TODO: flex-start, center, flex-end */
+}
+
+.box {
+    background-color: #28a745;
+    color: white;
+    padding: 150px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    
+}
+.imgplaceholder{
+    background-color: #28a745;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+   /* margin-top: 20px; */
+}
