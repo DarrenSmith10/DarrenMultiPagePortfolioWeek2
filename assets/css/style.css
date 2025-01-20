@@ -12,6 +12,10 @@ header {
     padding: 20px 0;
 }
 
+.fontStyle{
+    font-style: italic;
+}
+
 
 /* Flexbox navigation */
 .navbar {
