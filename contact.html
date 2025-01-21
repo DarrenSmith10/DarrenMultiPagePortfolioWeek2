@@ -7,22 +7,45 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-      <!-- Navigation bar -->
+     <!-- Navigation bar -->
     
-   <!-- Navigation bar -->
-    
-   <nav class="navbar">
-    <header class="logo"></header> <!-- insert image of logo -->
-       <a href="#" class="logo">
-       <img src="./assets/images/MonsterNormalnormal1.png" alt="MonsterNormalnormal1"></a>
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="projects.html">Projects</a>
-       <a href="contact.html">Contact</a>
-   <main class="searchbar">
-       <input type="text" placeholder="Search..">
-   </main> 
-   </nav>
+    <nav class="navbar">
+        <a class="logo">
+            <img src="./assets/images/MonsterNormalnormal1.png" alt="MonsterNormalnormal1">
+        </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    <main class="searchbar">
+        <input type="text" placeholder="Search..">
+    </main> 
+    </nav>
+    <form action="/action_page.php">
+        <h3>Contact Form</h3>
+
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" name="Name" placeholder="Name">
+        
+            <label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="email">
+        
+            <label for="dropdwn">Age</label>
+            <select id="Age" name="Age">
+              <option value="Opt1">18-25</option>
+              <option value="Opt2">26-34</option>
+              <option value="Opt3">34-42</option>
+              <option value="Opt3">42+</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
+        </div>
     <footer>
         <p>Darren Smith Copyright</p>
     </footer>

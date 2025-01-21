@@ -3,18 +3,17 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #ffffff;
+    background: rgb(213, 212, 242, 0.66);
 }
 
 header {
-    background-color: #333;
-    color: white;
+    
+    
     padding: 20px 0;
 }
 
-.fontStyle{
-    font-style: italic;
-}
+
+
 
 
 /* Flexbox navigation */
@@ -25,8 +24,9 @@ header {
     display: flex;
 
     justify-content: center;
-    background-color: #dde0e5;
+    background-color: rgba(68, 180, 92, 0.66);
     padding: 10px;
+    box-shadow: 1px 1px 10px 3px;
 }
 
 .navbar a {
@@ -48,7 +48,7 @@ header {
     /*background-color: crimson;*/
     justify-content: left;
     /* margin-left: auto; */
-    height: 50px;
+    height: 20px;
 
 }
 .searchbar{
@@ -56,6 +56,22 @@ header {
 
     justify-content: right;
     padding: 10px;
+}
+
+
+.Banner{
+    flex-wrap: wrap;
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px auto;
+    padding: 90px;
+    background-image:url("../images/Background_Banner.png");
+    border: 1px solid #ccc;
+    max-width: 1200px;
+    
+
 }
 
 /* Home Page Area */
@@ -68,7 +84,7 @@ header {
     align-items: center;
     margin: 20px auto;
     padding: 150px;
-    background-color:  rgba(245, 239, 224, 1);
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
     border: 2px solid #ccc;
     max-width: 1200px;
     
@@ -83,7 +99,7 @@ header {
     height: 500px;
     margin: 20px auto;
     padding: 150px;
-    background-color: rgba(245, 239, 224, 1);
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
     border: 2px solid #ccc;
 
     /* Flexbox alignment properties */
@@ -93,17 +109,47 @@ header {
     /* TODO: flex-start, center, flex-end */
 }
 
-.box {
-    background-color: #28a745;
-    color: white;
+.boxPlaceholder {
+   
+    background-color: #04AA6D;
+    color: black;
     padding: 150px;
     margin: 10px;
     text-align: center;
     justify-content: center;
-    border-radius: 5px;
+    box-shadow: 1px 1px 10px 3px;
+   
 
     
 }
+
+.boxPlaceholder:hover{
+    animation-name: stretch;
+    animation-duration: 3.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0.2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    
+    
+}
+
+  @keyframes stretch {
+    0% {
+      transform: scale(1);
+      background-color: red;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      transform: scale(1.5);
+      background-color: yellow;
+    }
+  }
 
 /*About Area */
 
@@ -160,6 +206,7 @@ header {
     /*margin: 20px auto;
     padding: 150px;*/
     background-color: rgba(245, 239, 224, 1);
+
     border: 2px solid #c4bfbf;
 
     /* Flexbox alignment properties */
@@ -177,7 +224,7 @@ header {
     height: 1000px;
     /*margin: 20px auto;
     padding: 150px;*/
-    background-color: #ddd;
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
     border: 2px solid #ccc;
 
     /* Flexbox alignment properties */
@@ -191,6 +238,135 @@ header {
     background-color: #28a745;
 
 }
+
+/*Image Gallery for Projects */
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  /*Contact Form */
+
+  /* Dropdown button */
+
+  .dropbtn{
+      background-color: blueviolet;
+      color: white;
+      padding: 16p;
+      font-size: 16px;
+      border: none;
+  
+  }
+  .dropdown{
+      position: relative;
+      display: inline-block;
+  }
+  
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+    /*Form
+  
+    /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */ 
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    
+    /* Style the submit button with a specific background color etc */
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      height: 50px;
+      width: 100px;
+      padding: 12px 20px;
+      border: 2px solid black;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 5px 5px 5px #aaaaaa;
+    }
+    
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+      background-color: #45a049;
+      height: 50px;
+      width: 100px;
+      margin: 20;
+   animation: 
+      pulse 3s ease infinite alternate, 
+      nudge 5s linear infinite alternate;
+          
+  }
+        
+       
+        
+  @keyframes nudge {
+      0%, 100% {
+      transform: translate(0, 0);
+      }
+          
+      50%
+       { 
+          transform: translate(150px, 0);
+      
+      }
+          
+      80%
+       {
+          transform: translate(-150px, 0);
+      }
+  }
+   
+    /* Add a background color and some padding around the form */
+    .container {
+      border-radius: 5px;
+      border-color: black;
+      background-image: linear-gradient(to right, rgb(7 140 137),rgb(110 212 210));
+      padding: 20px;
+      box-shadow: 5px 5px 5px #aaaaaa;
+  
+    }
+    /* animation button parameters */
 
 
 
