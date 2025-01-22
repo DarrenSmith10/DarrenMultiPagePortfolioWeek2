@@ -1,3 +1,4 @@
+/* General Parameters */
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     margin: 0;
@@ -7,20 +8,18 @@ body {
 }
 
 header {
-    
-    
     padding: 20px 0;
 }
 
-
-
+.paratext{
+    text-shadow: 1px 1px 3px white;
+}
 
 
 /* Flexbox navigation */
 .navbar {
    
     display: flex;
-
     justify-content: center;
     background-color: rgba(68, 180, 92, 0.66);
     padding: 10px;
@@ -39,7 +38,7 @@ header {
     background-color: rgba(183, 229, 193, 0.3);
 }
 
-/*adding Logo */
+/*Nav Logo */
 
 .logo{
     display: flex;
@@ -56,7 +55,7 @@ header {
     padding: 10px;
 }
 
-
+/*Banner added below the Naviation in Home Page */
 .Banner{
     flex-wrap: wrap;
     display: flex;
@@ -67,13 +66,11 @@ header {
     background-image:url("../images/Background_Banner.png");
     border: 1px solid #ccc;
     max-width: 1200px;
-    
-
 }
 
-/* Home Page Area */
+/* Home Page Flexi containers --------------------------------------------- */
 
-.contentProjectArea{
+.HomeProjectAreaContainer{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
@@ -83,13 +80,9 @@ header {
     background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
     border: 1px solid #ccc;
     max-width: 1200px;
-    
-
 }
-.contentColumn1Area{
+.HomeButtonsContainer{
     display: flex;
-
-    
     flex-direction: row;
     max-width: 1200px;
     height: 500px;
@@ -97,19 +90,14 @@ header {
     padding: 95px;
     background-image: linear-gradient(to right, rgba(245, 239, 224, 0), rgb(237, 225, 197, 0));
     
-
     /* Flexbox alignment properties */
     justify-content: space-evenly;
-    
     align-items: center;
-   
 }
 
-.HomeImg{
+.HomeImgContainer{
     display: flex;
-    
     justify-content: center;
-    
     padding: 120px;
     margin: 10px;
     width: 300px;
@@ -118,8 +106,8 @@ header {
     box-shadow: 1px 1px 10px 3px;
 }
 
+/* Buttons in the home page --------------------------------------- */
 .HomeButtons {
-   
     background-color: #04AA6D;
     color: black;
     padding: 110px;
@@ -128,11 +116,9 @@ header {
     justify-content: center;
     border-radius: 25%;
     box-shadow: 1px 1px 10px 3px;
-   
-
-    
 }
 
+/* Homepage buttons hover animation --------------------------------- */
 .HomeButtons:hover{
     animation-name: stretch;
     animation-duration: 3.5s; 
@@ -141,12 +127,10 @@ header {
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
-    animation-play-state: running;
-    
-    
+    animation-play-state: running; 
 }
 
-  @keyframes stretch {
+@keyframes stretch {
     0% {
       transform: scale(1);
       background-color: #04AA6D;
@@ -163,11 +147,55 @@ header {
     }
   }
 
-/*About Area */
+/*About Area -----------------------------------*/
 
+/* Flexi Containers for the Area Page */
+.AboutMePageContainer{
+    display: flex;
+
+    /*flex-wrap: wrap;*/
+}
+.AboutMePageSideContainer{
+    display: flex;
+
+    /* TODO: what happens when we change this? */
+    flex-direction: column;
+    width: 400px;
+    height: 1000px;
+    /*margin: 20px auto;
+    padding: 150px;*/
+    background-color: rgba(245, 239, 224, 1);
+
+    border: 2px solid #c4bfbf;
+
+    /* Flexbox alignment properties */
+    justify-content: space-around;
+    /* TODO: flex-start, center, space-between */
+    align-items: center;
+    /* TODO: flex-start, center, flex-end */
+}
+.AboutMyProjectsContainer{
+    display: flex;
+
+    /* TODO: what happens when we change this? */
+    flex-direction: column;
+    width: 1800px;
+    height: 1000px;
+    /*margin: 20px auto;
+    padding: 150px;*/
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
+    border: 2px solid #ccc;
+
+    /* Flexbox alignment properties */
+    justify-content: space-around;
+    /* TODO: flex-start, center, space-between */
+    align-items: center;
+    /* TODO: flex-start, center, flex-end */
+}
+
+/*Picture for About me Page */
 .profilePic {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     padding: 150px;
     margin: 10px;
@@ -189,67 +217,14 @@ header {
 }
 .AboutProjectPic2{
     display: flex;
-   
     justify-content: center;
-    
     width: 300px;
     height: 200px;
     padding: 10px;
     margin: 10px;
 }
 
-
-
-
-
-.contentAboutAreaCont{
-    display: flex;
-
-    /*flex-wrap: wrap;*/
-}
-.contentAboutAreaSide{
-    display: flex;
-
-    /* TODO: what happens when we change this? */
-    flex-direction: column;
-    width: 400px;
-    height: 1000px;
-    /*margin: 20px auto;
-    padding: 150px;*/
-    background-color: rgba(245, 239, 224, 1);
-
-    border: 2px solid #c4bfbf;
-
-    /* Flexbox alignment properties */
-    justify-content: space-around;
-    /* TODO: flex-start, center, space-between */
-    align-items: center;
-    /* TODO: flex-start, center, flex-end */
-}
-.contentAboutArea{
-    display: flex;
-
-    /* TODO: what happens when we change this? */
-    flex-direction: column;
-    width: 1800px;
-    height: 1000px;
-    /*margin: 20px auto;
-    padding: 150px;*/
-    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
-    border: 2px solid #ccc;
-
-    /* Flexbox alignment properties */
-    justify-content: space-around;
-    /* TODO: flex-start, center, space-between */
-    align-items: center;
-    /* TODO: flex-start, center, flex-end */
-}
-
-
-
-/*Image Gallery for Projects */
-
-
+/*Image Gallery for Projects Likely to be improved maybe with Bootstrap -------------- */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -263,68 +238,73 @@ header {
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  }
+}
   
-  .column img {
+.column img {
     margin-top: 8px;
     vertical-align: middle;
-  }
+}
 
-  /*Contact Form */
+/*Contact Form -------------------------------------------------*/
 
-  /* Dropdown button */
+/* Dropdown button */
 
-  .dropbtn{
-      background-color: blueviolet;
-      color: white;
-      padding: 16p;
-      font-size: 16px;
-      border: none;
+.dropbtn{
+    background-color: blueviolet;
+    color: white;
+    padding: 16p;
+    font-size: 16px;
+    border: none;
   
-  }
-  .dropdown{
-      position: relative;
-      display: inline-block;
-  }
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
   
-  .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
     
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
     
-    .dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
     
-    .dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
     
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
   
-    /*Form
+/*Form
   
-    /* Style inputs with type="text", select elements and textareas */
-  input[type=text], select, textarea {
-      width: 100%; /* Full width */
-      padding: 12px; /* Some padding */ 
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-    }
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
     
 /* Pseudo-elements for Email and Phone Labels */
-/* Add ✉️ and 📞 icons before the labels */
+/* Added ✉️ and 📞 icons before the labels */
 
 /* ::before pseudo-element for <h1> */
 .email-label::after {
@@ -340,67 +320,52 @@ header {
     
 }
 
-
-    /* Style the submit button with a specific background color etc */
-    input[type=submit] {
-      background-color: #04AA6D;
-      color: white;
-      height: 50px;
-      width: 100px;
-      padding: 12px 20px;
-      border: 2px solid black;
-      border-radius: 4px;
-      cursor: pointer;
-      box-shadow: 5px 5px 5px #aaaaaa;
-    }
+/* Styled the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    height: 50px;
+    width: 100px;
+    padding: 12px 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
     
-    /* When moving the mouse over the submit button, add a darker green color */
-    input[type=submit]:hover {
-      background-color: #45a049;
-      height: 50px;
-      width: 100px;
-      margin: 20;
-   animation: 
-      pulse 3s ease infinite alternate, 
-      nudge 5s linear infinite alternate;
-          
-  }
-        
-       
-        
-  @keyframes nudge {
-      0%, 100% {
-      transform: translate(0, 0);
-      }
-          
-      50%
-       { 
-          transform: translate(150px, 0);
-      
-      }
-          
-      80%
-       {
-          transform: translate(-150px, 0);
-      }
-  }
-   
-    /* Add a background color and some padding around the form */
-    .container {
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-        border-color: black;
-        background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
-        padding: 20px;
-        box-shadow: 5px 5px 5px #aaaaaa;
-  
+/* When moving the mouse over the submit button, added a darker green color &  animation button move*/
+input[type=submit]:hover {
+    background-color: #45a049;
+    height: 50px;
+    width: 100px;
+    margin: 20;
+    animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;          
+}
+               
+@keyframes nudge { 0%, 100% 
+    {
+        transform: translate(0, 0);
     }
-    /* animation button parameters */
-
-
-
-
+    50%
+    
+    { 
+        transform: translate(150px, 0);
+    }
+    80%
+    {
+        transform: translate(-150px, 0);
+    }
+}  
+/* Added a background color and some padding around the form */
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border-color: black;
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
+    padding: 20px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
 /* foooter */
 footer {
     display: flex;
