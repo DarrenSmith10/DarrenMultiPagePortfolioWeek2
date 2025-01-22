@@ -18,9 +18,7 @@ header {
 
 /* Flexbox navigation */
 .navbar {
-    /* TODO: explain the purpose of the following properties
-    The purpose of changing these parameters is controlling the Nav.
-    For example if no display the flex the bar vanishes  */
+   
     display: flex;
 
     justify-content: center;
@@ -38,17 +36,17 @@ header {
 }
 
 .navbar a:hover {
-    background-color: #0056b3;
+    background-color: rgba(183, 229, 193, 0.3);
 }
 
 /*adding Logo */
 
 .logo{
     display: flex;
-    /*background-color: crimson;*/
+    
     justify-content: left;
-    /* margin-left: auto; */
-    height: 20px;
+    
+    height: 60px;
 
 }
 .searchbar{
@@ -62,7 +60,6 @@ header {
 .Banner{
     flex-wrap: wrap;
     display: flex;
-
     justify-content: space-evenly;
     align-items: center;
     margin: 10px auto;
@@ -79,13 +76,12 @@ header {
 .contentProjectArea{
     flex-wrap: wrap;
     display: flex;
-
     justify-content: space-evenly;
     align-items: center;
     margin: 20px auto;
     padding: 150px;
     background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     max-width: 1200px;
     
 
@@ -93,37 +89,51 @@ header {
 .contentColumn1Area{
     display: flex;
 
-    /* TODO: what happens when we change this? */
+    
     flex-direction: row;
-    width: 1200px;
+    max-width: 1200px;
     height: 500px;
     margin: 20px auto;
-    padding: 150px;
-    background-image: linear-gradient(to right, rgba(245, 239, 224, 1), rgb(237, 225, 197));
-    border: 2px solid #ccc;
+    padding: 95px;
+    background-image: linear-gradient(to right, rgba(245, 239, 224, 0), rgb(237, 225, 197, 0));
+    
 
     /* Flexbox alignment properties */
     justify-content: space-evenly;
-    /* TODO: flex-start, center, space-between */
+    
     align-items: center;
-    /* TODO: flex-start, center, flex-end */
+   
 }
 
-.boxPlaceholder {
+.HomeImg{
+    display: flex;
+    
+    justify-content: center;
+    
+    padding: 120px;
+    margin: 10px;
+    width: 300px;
+    height: 220px;
+    border-radius: 20%;
+    box-shadow: 1px 1px 10px 3px;
+}
+
+.HomeButtons {
    
     background-color: #04AA6D;
     color: black;
-    padding: 150px;
+    padding: 110px;
     margin: 10px;
     text-align: center;
     justify-content: center;
+    border-radius: 25%;
     box-shadow: 1px 1px 10px 3px;
    
 
     
 }
 
-.boxPlaceholder:hover{
+.HomeButtons:hover{
     animation-name: stretch;
     animation-duration: 3.5s; 
     animation-timing-function: ease-out; 
@@ -139,37 +149,38 @@ header {
   @keyframes stretch {
     0% {
       transform: scale(1);
-      background-color: red;
-      border-radius: 100%;
+      background-color: #04AA6D;
+      border-radius: 25%;
     }
     50% {
-      background-color: orange;
+      background-color: #97aa04;
+      border-radius: 50%;
     }
     100% {
       transform: scale(1.5);
-      background-color: yellow;
+      background-color: #aa0404;
+      border-radius: 100%;
     }
   }
 
 /*About Area */
 
-.profilePic{
-    display: flex;
-    /*background-color: crimson;*/
+.profilePic {
+    display: flex
+;
     justify-content: center;
-    /* margin-left: auto; */
     padding: 150px;
     margin: 10px;
     width: 250px;
     height: 300px;
-
+    border-radius: 50%;
 }
 
 .AboutProjectPic1{
     display: flex;
-    /*background-color: crimson;*/
+    
     justify-content: center;
-    /* margin-left: auto; */
+    
     width: 300px;
     height: 200px;
     padding: 10px;
@@ -178,9 +189,9 @@ header {
 }
 .AboutProjectPic2{
     display: flex;
-    /*background-color: crimson;*/
+   
     justify-content: center;
-    /* margin-left: auto; */
+    
     width: 300px;
     height: 200px;
     padding: 10px;
@@ -234,10 +245,7 @@ header {
     /* TODO: flex-start, center, flex-end */
 }
 
-.imgplaceholder{
-    background-color: #28a745;
 
-}
 
 /*Image Gallery for Projects */
 
@@ -315,6 +323,24 @@ header {
       resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
     }
     
+/* Pseudo-elements for Email and Phone Labels */
+/* Add ✉️ and 📞 icons before the labels */
+
+/* ::before pseudo-element for <h1> */
+.email-label::after {
+    content: "✉️";
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.phone-label::after {
+    content: "📞";
+    font-size: 1rem;
+    margin-right: 5px;
+    
+}
+
+
     /* Style the submit button with a specific background color etc */
     input[type=submit] {
       background-color: #04AA6D;
@@ -377,8 +403,12 @@ header {
 
 /* foooter */
 footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
     background-color: #333;
     color: white;
-    padding: 20px 0;
-   /* margin-top: 20px; */
+    padding: 20px;
+    max-width: 1700px;
 }
