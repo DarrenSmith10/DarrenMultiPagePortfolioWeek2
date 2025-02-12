@@ -85,7 +85,7 @@ header {
 .HomeProjectAreaContainer{
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: 20px auto;
     padding: 150px;
@@ -117,7 +117,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     width: 300px;
     height: 220px;
     border-radius: 20%;
